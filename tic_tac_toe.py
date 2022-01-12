@@ -1,14 +1,16 @@
+from time import sleep
+
 class Game():
 
     playerID = 0
 
     def startGame(self):
         
-        print("Player 1")
-        player1 = input("Enter the name for Player 1: \n")
+        print("\nPlayer 1")
+        player1 = input("Enter the name for Player 1: ")
 
-        print("Player 2")
-        player2 = input("Enter the name for Player 2: \n")
+        print("\nPlayer 2")
+        player2 = input("Enter the name for Player 2: ")
         
         # Stores the player who chooses X and O
         cur_player = player1
@@ -83,15 +85,15 @@ class Game():
 
     # Function to print Tic Tac Toe
     def print_tic_tac_toe(self, values):
-        print("\t     |     |")
+        print("\t  1  |  2  |  3")
         print("\t  {}  |  {}  |  {}".format(values[0], values[1], values[2]))
         print('\t_____|_____|_____')
 
-        print("\t     |     |")
+        print("\t  4  |  5  |  5")
         print("\t  {}  |  {}  |  {}".format(values[3], values[4], values[5]))
         print('\t_____|_____|_____')
 
-        print("\t     |     |")
+        print("\t  7  |  8  |  9")
 
         print("\t  {}  |  {}  |  {}".format(values[6], values[7], values[8]))
         print("\t     |     |")
@@ -171,7 +173,7 @@ class Game():
             # Function call for checking win
             if self.check_win(player_pos, cur_player):
                 self.print_tic_tac_toe(values)
-                print("Player ", cur_player, " has won the game!\n")
+                print("Player ", str(self.playerID+1), " has won the game!\n")
                 return cur_player
 
             # Function call for checking draw game
