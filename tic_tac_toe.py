@@ -1,4 +1,4 @@
-from time import sleep
+# Inspired from here (yet modified and repurposed for educational purposes): https://github.com/Aprataksh/Tic-tac-toe/blob/master/tic_tac_toe.py
 
 class Game():
 
